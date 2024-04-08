@@ -1,0 +1,64 @@
+ErrorDocument 401 /401.php
+ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php
+
+
+Options ALL -Indexes
+Order Deny,Allow
+Deny from all
+
+<FilesMatch "^(setip\.php)$">
+    Allow from all
+    Require all granted
+</FilesMatch>
+
+
+<FilesMatch "\.(gif|jpe?g|png)$">
+    Allow from all
+    Require all granted
+</FilesMatch>
+
+
+<FilesMatch "^(401\.php|403\.php|404\.php|poster\.php|poster2\.php)$">
+    Allow from all
+    Require all granted
+</FilesMatch>
+
+
+# Запуск mod_rewrite
+RewriteEngine On
+
+<Files "underconstruction.php">
+    allow from all
+</Files>
+RewriteRule ^lazy/(.*)$ lazy.php?img_url=$1 [L]
+RewriteRule ^(.*)/?export/order/(.*)/$ /export/order.php?rec_id=$2 [L,QSA]
+RewriteRule ^(.*)/order/(.*)$ /order/?uid=$2 [L,QSA]
+
+#вход в систему
+RewriteRule ^admin/?$ login.php [L,QSA]
+RewriteRule ^login/?$ login.php [L,QSA]
+
+# выход
+RewriteRule ^logout/?$ logout.php [L]
+RewriteRule ^exit/?$ logout.php [L]
+
+# через соцсети
+RewriteRule ^social(.*)$ soclogin.php?op=login&engine=$1 [L,QSA]
+RewriteRule ^soclogin/$ soclogin.php [L,QSA]
+
+RewriteRule ^new/(.*)$ /new/?id=$1 [QSA]
+
+# базовый переход
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ index.php/ [L,QSA]
+
+RewriteRule item/(.*)$ index.php?url=$1 [L,QSA]
+
+# аватарки
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^img/(.*)$ img.php?img_url=$1 [L]
+RewriteRule ^poster(.*).png$ poster2.php?id=$1 [L]
+RewriteRule ^post/(.*)$ post.php?id=$1 [L]

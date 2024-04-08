@@ -1,0 +1,65 @@
+html {
+	overflow-x: hidden;
+}
+body {
+	font-size: 18px;
+}
+
+h1, h2, h3 {
+	text-align: center;
+	align-self: center;
+	margin:0 auto;
+}
+.iphoneonly
+	{
+	display:table !important;
+	}
+
+.noiphone {
+	display:none !important;
+	}
+
+.iphonecolumn {
+	max-width:100%;
+	flex-flow: column;
+	}
+
+.site-block {
+	padding:2.4em 1.2em;
+}
+
+.site-block.footer {
+	padding:2.4em;
+}
+
+.iphoneorder1{order:1}
+.iphoneorder2{order:2}
+.iphoneorder3{order:3}
+.iphoneorder4{order:4}
+.iphoneorder5{order:5}
+
+
+.iphoneolumn .fl1,
+.iphoneolumn .fl2,
+.iphoneolumn .fl3,
+.iphoneolumn .fl4,
+.iphoneolumn .fl5,
+.iphoneolumn .fl6,
+.iphoneolumn .fl7,
+.iphoneolumn .fl8,
+.iphoneolumn .fl9,
+.iphoneolumn .fl10,
+.iphoneolumn .fl11,
+.iphoneolumn .fl12,
+.iphoneolumn .fl13,
+.iphoneolumn .fl14,
+.iphoneolumn .fl15,
+.iphoneolumn .fl16,
+.iphoneolumn .fl17,
+.iphoneolumn .fl18,
+.iphoneolumn .fl19,
+.iphoneolumn .fl20 {
+	flex: 1;
+    -webkit-flex: 1;
+    flex-grow: 1;
+}
