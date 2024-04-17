@@ -1,6 +1,6 @@
 <?php
-ini_set('error_reporting', E_ALL & !E_DEPRECATED);
-error_reporting(E_ALL & !E_DEPRECATED);
+ini_set('error_reporting', E_ALL ^ E_DEPRECATED);
+error_reporting(E_ALL ^ E_DEPRECATED);
 set_time_limit(600);
 
 define('CMS_NAME', 'I hate EA');

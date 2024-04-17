@@ -1,9 +1,9 @@
 <?
 // установки сервера и базы данных
 define('CMS_DB_SERVER', 'localhost');
-define('CMS_DB_USER', '');
-define('CMS_DB_PASS', '');
-define('CMS_DB_NAME', '');
+define('CMS_DB_USER', 'eahater');
+define('CMS_DB_PASS', '2M!pp-q8IX[JtJYN');
+define('CMS_DB_NAME', 'eahater');
 define('CMS_DB_CODEPAGE', 'utf8');
 define('DB_PREFIX','ea_');
 
