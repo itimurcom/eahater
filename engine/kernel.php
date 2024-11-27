@@ -18,6 +18,10 @@ require "../--#SKEL80/run.php";
 define ('DEFAULT_ADMIN_EMAIL', 'info@itimur.com');
 define ('DEFAULT_ADMIN_NAME', "admin<".DEFAULT_ADMIN_EMAIL.">");
 
+definition([
+	'DEFAULT_VIEW_TABLE' => 'views'
+]);
+
 
 $_CDN['jquery']['ver']		= '3.5.1';
 $_CDN['jquery']['ui'] 		= '1.12.1';

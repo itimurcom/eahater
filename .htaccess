@@ -62,6 +62,3 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^img/(.*)$ img.php?img_url=$1 [L]
 RewriteRule ^poster(.*).png$ poster2.php?id=$1 [L]
 RewriteRule ^post/(.*)$ post.php?id=$1 [L]
-
-allow from 188.231.235.103
-allow from 188.231.235.103
